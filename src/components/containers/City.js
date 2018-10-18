@@ -8,8 +8,9 @@ class City extends Component {
 
   componentDidUpdate(prevProps,prevState)
   {
-    if(!prevProps.addCityError && this.props.addCityError) {
-      alert(this.props.addCityError);
+
+    if(this.props.addCityError && this.props.addCityError !== prevProps.addCityError) {
+      alert(this.props.addCityError.message);
     }
   }
 

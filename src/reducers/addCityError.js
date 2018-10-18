@@ -5,7 +5,7 @@ export default (state = initialState.addCityError, action) => {
 	switch(action.type) {
 
 		case types.ADD_CITY_FAIL:
-			return action.error
+			return {message:action.error}
 
 		default:
 			return state;
